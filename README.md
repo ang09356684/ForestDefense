@@ -2,7 +2,7 @@
 
 ## How to play
 
-use mouse 
+using mouse 
 
 left click : shooting the bow
 
@@ -12,26 +12,26 @@ right click : using magic
 
 ### Title
 
-![title](D:\遊戲素材\遊戲畫面\title.png)
+![title](gamescreen/title.png)
 
 ### Tutorial
 
-![教學](D:\遊戲素材\遊戲畫面\教學.jpg)
+![教學](gamescreen/教學.jpg)
 
 ### Battle
 
-![戰鬥](D:\遊戲素材\遊戲畫面\戰鬥.jpg)
+![戰鬥](gamescreen/戰鬥.jpg)
 
 ### Preparing Room
 
-![shop](D:\遊戲素材\遊戲畫面\shop.png)
+![shop](gamescreen/shop.png)
 
 
 
 ### Ranking
 
-![排行榜](D:\遊戲素材\遊戲畫面\排行榜.jpg)
+![排行榜](gamescreen/排行榜.jpg)
 
 
 
-![排行榜2](D:\遊戲素材\遊戲畫面\排行榜2.jpg)
+![排行榜2](gamescreen/排行榜2.jpg)
