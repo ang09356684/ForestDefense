@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="magic.MagicRange" x="94" y="1216">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="enemy.EnemyFactory" x="554" y="78">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="enemy.Enemy"
+            endpointName="enemy" kind="Simple"/>
+    </Class>
+    <Class name="scene.BattleScene" x="306" y="240">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="enemy.Enemy"
+            endpointName="soldiersList" kind="Simple"/>
+        <Association destinationClassName="enemy.EnemyFactory"
+            endpointName="ef" kind="Simple"/>
+        <Association destinationClassName="enemy.SoldiersFactory"
+            endpointName="sf" kind="Simple"/>
+        <Association destinationClassName="enemy.Enemy"
+            endpointName="enemyList" kind="Simple">
+            <Point x="884" y="516"/>
+        </Association>
+        <Association destinationClassName="gameobject.Cannon"
+            endpointName="cannon" kind="Simple"/>
+        <Association destinationClassName="magic.MagicRange"
+            endpointName="fireRange" kind="Simple"/>
+        <Association destinationClassName="gameobject.Arrow"
+            endpointName="arrows" kind="Simple"/>
+        <Association destinationClassName="gameobject.Bow"
+            endpointName="bow" kind="Simple"/>
+        <Association destinationClassName="magic.MagicRange"
+            endpointName="windRange" kind="Simple">
+            <Point x="384" y="1202"/>
+        </Association>
+        <Communication destinationClassName="magic.MagicRange"/>
+        <Communication destinationClassName="enemy.EnemyFactory"/>
+        <Communication destinationClassName="gameobject.Arrow"/>
+        <Communication destinationClassName="gameobject.Bow"/>
+        <Communication destinationClassName="enemy.Enemy"/>
+        <Communication destinationClassName="gameobject.Cannon"/>
+        <Communication destinationClassName="enemy.SoldiersFactory"/>
+    </Class>
+    <Class name="gameobject.Arrow" x="812" y="606">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="gameobject.Movable"/>
+    </Class>
+    <Class name="gameobject.Bullet" x="1180" y="1120">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="gameobject.Movable"/>
+    </Class>
+    <Class name="gameobject.Bow" x="788" y="880">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="gameobject.Movable"/>
+    </Class>
+    <Class name="enemy.Enemy" x="922" y="76">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="gameobject.Movable"/>
+    </Class>
+    <Class name="enemy.StageEnemy" x="1254" y="346">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="enemy.Enemy"
+            endpointName="enemy" kind="Simple"/>
+    </Class>
+    <Class name="gameobject.Movable" x="1226" y="576">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="gameobject.Cannon" x="806" y="1178">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="gameobject.Movable"/>
+        <Association destinationClassName="magic.MagicRange"
+            endpointName="range" kind="Simple"/>
+        <Association destinationClassName="gameobject.Bullet"
+            endpointName="bullet" kind="Simple">
+            <Point x="1092" y="1296"/>
+        </Association>
+        <Association destinationClassName="gameobject.Bullet"
+            endpointName="bullets" kind="Simple"/>
+        <Communication destinationClassName="gameobject.Bullet"/>
+    </Class>
+    <Class name="enemy.SoldiersFactory" x="1230" y="458">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="enemy.StageEnemy"
+            endpointName="se" kind="Simple"/>
+        <Association destinationClassName="enemy.Enemy"
+            endpointName="soldiers" kind="Simple"/>
+        <Communication destinationClassName="enemy.Enemy"/>
+        <Communication destinationClassName="enemy.StageEnemy"/>
+        <Communication destinationClassName="gameobject.Movable"/>
+    </Class>
+</ClassDiagram>
